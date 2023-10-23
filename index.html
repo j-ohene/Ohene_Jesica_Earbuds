@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="Ohene_J_earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.44" exposure="0.42" shadow-softness="0.39">
+      <button class="Hotspot" slot="hotspot-2" data-position="2.4970253529515167m -0.15464313152620135m 0.48305188092382145m" data-normal="0.10398334717058032m 0.9712952007570514m 0.21394648045135484m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Toggle sensor</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="2.383679408570681m -2.1159505249185533m 0.27513809436115433m" data-normal="0.12050959162131589m 0.02219998178178989m 0.9924639031905151m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Earpiece-Available in 3 sizes for your comfort</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-0.16461831334049365m -1.6673234188154837m -0.7636875813730997m" data-normal="0.3475118136178313m 0.08856065754311598m 0.9334840916328337m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Earpiece-Available in 3 sizes for your comfort</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="0.17269904359608768m 0.333191090534768m 0.4905547457703358m" data-normal="0.07070910174826431m 0.9705765938055032m 0.23017666798974448m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Volume down</div>
+      </button><button class="Hotspot" slot="hotspot-6" data-position="0.24820182532003993m 0.44844955220878857m -0.020665323887771814m" data-normal="0.06982578489480464m 0.9707611485068112m 0.229667482055169m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Volume up
+          </div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  </body>
+</html>
