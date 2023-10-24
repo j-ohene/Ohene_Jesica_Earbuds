@@ -1,17 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template</title>
+    <title> Alto Audio</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <link type="text/css" href="css/styles.css" rel="stylesheet"/>
+    <link type="text/css" href="css/grid.css" rel="stylesheet"/>
   </head>
   <body>
+    <header>
+     
+      <header>
+        <div class="grid-con">
+          <div class="col-span-full m-col-span-ful l-col-span-full xl-col-span-full">
+ <h1>Alto Audio</h1>
+ </div>
+          </div>
+    </header>
     <!-- <model-viewer> HTML element -->
     <model-viewer src="Ohene_J_earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.44" exposure="0.42" shadow-softness="0.39">
       <button class="Hotspot" slot="hotspot-2" data-position="2.4970253529515167m -0.15464313152620135m 0.48305188092382145m" data-normal="0.10398334717058032m 0.9712952007570514m 0.21394648045135484m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Toggle sensor</div>
+          <div class="HotspotAnnotation">Toggle sensor-tap once to pause/play, tap twice to to skip the song. </div>
       </button><button class="Hotspot" slot="hotspot-3" data-position="2.383679408570681m -2.1159505249185533m 0.27513809436115433m" data-normal="0.12050959162131589m 0.02219998178178989m 0.9924639031905151m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">Earpiece-Available in 3 sizes for your comfort</div>
       </button><button class="Hotspot" slot="hotspot-4" data-position="-0.16461831334049365m -1.6673234188154837m -0.7636875813730997m" data-normal="0.3475118136178313m 0.08856065754311598m 0.9334840916328337m" data-visibility-attribute="visible">
@@ -29,7 +39,7 @@
           View in your space
       </button>
       <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
+          <img src="img/ar_hand_prompt.png">
       </div>
     </model-viewer>  
     <script src="script.js"></script>
