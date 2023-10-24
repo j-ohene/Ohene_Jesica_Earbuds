@@ -13,6 +13,11 @@ body {
   height: 100%;
 }
 
+model-viewer{
+  background-color: aquamarine;
+  display: flexbox;
+  width:100%;
+}
 
 .Hotspot {
   background: #fff;

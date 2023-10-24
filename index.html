@@ -9,9 +9,12 @@
     <link href="css/grid.css" rel="stylesheet"/>
   </head>
   <body>
+    <header>
+      <h1>Alto Audio</h1>
+    </header>
     <section class="grid-con">
-  <video class="col-span-full m-col-span-full l-col-span-full xl-col-span-full"
-  controls poster="images/placeholder.jpg">
+  <video class="col-span-full m-col-span-full l-col-span-full xl-col-span-full box"
+  controls poster="http://www.placeholder.co/1000x800">
     <source src="" type="video/mp4">
 </video>
 
@@ -19,7 +22,7 @@
     </section>
     <!-- <model-viewer> HTML element -->
       <section class=grid-con>
-        <div class="col-span-full m-col-span-full l-col-span-full xl-col-span-full" >
+        <div class="col-span-full m-col-span-full l-col-span-full xl-col-span-full box" >
     <model-viewer src="Ohene_J_earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.44" exposure="0.42" shadow-softness="0.39">
       <button class="Hotspot" slot="hotspot-2" data-position="2.4970253529515167m -0.15464313152620135m 0.48305188092382145m" data-normal="0.10398334717058032m 0.9712952007570514m 0.21394648045135484m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">Toggle sensor</div>
@@ -33,8 +36,8 @@
           <div class="HotspotAnnotation">Volume up
           </div>
       </button>
-    </div>
-    </section>
+    
+    
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -42,9 +45,12 @@
           View in your space
       </button>
       <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
+          <img src="img/ar_hand_prompt.png">
       </div>
+
     </model-viewer>  
+  </div>
+  </section>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
