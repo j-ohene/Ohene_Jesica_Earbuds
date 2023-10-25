@@ -1,16 +1,15 @@
 header {
-  background: #c8d4f9;
-  font-family: Arial, Helvetica, sans-serif;
-  border-bottom: solid #8a93ad 2px;
+  background: rgb(222, 222, 246);
+  font-family: "Jaldi", sans-serif;
+  border-bottom: solid rgb(198, 198, 218) 2px;
 }
 
 #logo {
-  height: 80px;
-  background-color: #c8d4f9;
+  height: 60px;
 }
 
 body {
-  background: #c8d4f9;
+  background: rgb(222, 222, 246);
   color: black;
 }
 
@@ -37,13 +36,11 @@ h4 {
 }
 
 p {
-  color: black;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
 }
 
 li {
-  color: black;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
 }
@@ -75,7 +72,7 @@ model-viewer {
 }
 
 .Hotspot {
-  background-color: #c8d4f9;
+  background-color: rgb(222, 222, 246);
   border-radius: 32px;
   border: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -168,7 +165,7 @@ model-viewer {
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 12px 50%;
-  background-color: #c8d4f9;
+  background-color: rgb(222, 222, 246);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -226,8 +223,4 @@ model-viewer[ar-status=session-started] > #ar-prompt {
 
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
-}
-
-#specs {
-  padding-top: 50px;
 }/*# sourceMappingURL=styles.css.map */

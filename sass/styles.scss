@@ -1,7 +1,7 @@
 @use 'sass:color';
 
-$primary-color:#c8d4f9;
-$secondary-color:#fff;
+$primary-color:rgb(222, 222, 246);
+$secondary-color:rgb(39, 39, 39);
 $tertiary-color: black;
 
 $main-font-size:18pt;
@@ -10,47 +10,48 @@ $main-font-size:18pt;
 
 header{
     background:$primary-color;
-font-family: Arial, Helvetica, sans-serif;
-border-bottom: solid #8a93ad 2px;
+font-family: "Jaldi", sans-serif;
+border-bottom: solid rgb(198, 198, 218) 2px;
 }
 
 #logo{
-    height: 80px;
-    background-color: $primary-color
+    height: 60px;
 }
 body{
     background: $primary-color;
     color:black;
 
 }
- h1, h2, h3, h4{
-    color: $tertiary-color;
-    font-family: 'Jaldi', sans-serif;
-    font-weight: 600;
-}
-h1{
-    font-size: 28pt;
-}
-h2{
-    font-size: 26pt;
 
+h1, h2, h3, h4 {
+  color: $tertiary-color;
+  font-family: "Jaldi", sans-serif;
+  font-weight: 600;
 }
-h3{
-    font-size: 24pt;
+
+h1 {
+  font-size: 28pt;
 }
-h4{
-    font-size: 22pt ;
+
+h2 {
+  font-size: 26pt;
 }
-p {
-    color: $tertiary-color;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
+
+h3 {
+  font-size: 24pt;
 }
-li{
-    color: $tertiary-color;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
+
+h4 {
+  font-size: 22pt;
 }
+ p{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+ }
+ li{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+ }
 .promo-img{
     width: 800px;
 }
@@ -66,7 +67,7 @@ li{
   
   model-viewer{
     display: flexbox;
-    width:100%;
+    width: 100%;
     background-color: #ffffff;
     height: 400px;
     border: solid 3px rgb(87, 87, 87);
@@ -225,8 +226,4 @@ li{
   
   model-viewer > #ar-prompt > img {
     animation: circle 4s linear infinite;
-  }
-
-  #specs{
-    padding-top: 50px;
   }
