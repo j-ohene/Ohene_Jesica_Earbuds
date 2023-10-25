@@ -1,7 +1,5 @@
-# ${1:Earbuds Promotional Page}
+# Earbuds Promotional Page
 
-
-##Contents
 ##About
 
 Promotional page for Alto Earbuds
@@ -16,5 +14,5 @@ Includes ar object of earbud model created
 
 No installation required simply download the zip file and and open the index page
 
- #License 
+ ##License 
  MIT License
