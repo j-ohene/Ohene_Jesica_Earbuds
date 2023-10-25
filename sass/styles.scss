@@ -25,6 +25,9 @@ body{
     color: $tertiary-color;
     font-family: Arial, Helvetica, sans-serif;
 }
+.promo-img{
+    width: 800px;
+}
 
 :not(:defined) > * {
     display: none;
@@ -39,6 +42,11 @@ body{
     display: flexbox;
     width:100%;
     background-color: #DADCE0;
+  }
+
+  .promo-img{
+    width:800px;
+    display: block;
   }
   
   .Hotspot {
