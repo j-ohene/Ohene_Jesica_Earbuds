@@ -1,13 +1,33 @@
 // Handles loading the events for <model-viewer>'s slotted progress bar
-const onProgress = (event) => {
-  const progressBar = event.target.querySelector('.progress-bar');
-  const updatingBar = event.target.querySelector('.update-bar');
-  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-  if (event.detail.totalProgress === 1) {
-    progressBar.classList.add('hide');
-    event.target.removeEventListener('progress', onProgress);
-  } else {
-    progressBar.classList.remove('hide');
-  }
-};
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+
+( ()=>{
+  console.log("IIFE Fired");
+  //variables
+  const earbuds = document.querySelector ("#earbuds");
+  const hotSpots = document.querySelectorAll (".Hotspot");
+//functions
+function loaded() {
+  console.log(hotSpots);
+  hotSpots.forEach (hotSpot =>{
+    hotSpot.style.display = "block";
+  });
+}
+function showInfo(e){
+  //e.currentTarget.slot
+  console.log(e.currentTarget.slot);
+  let selected = document.querySelector(`button[slot="${e.currentTarget.slot}"] > div`);
+  //button{slot ="hotspot-2"}>div
+  gsap.to(selected, 1, {autoAlpha:1});
+}
+function hideInfo(e){
+  console.log (e.currentTarget.slot);
+  let selected = document.querySelector(`button[slot="${e.currentTarget.slot}"] > div`);
+  gsap.to(selected, 1, {autoAlpha:0});
+  
+}
+//event listeners
+earbuds.addEventListener("load", loaded);
+hotSpots.addEventListener("mouseover", showInfo);
+hotSpots.addEventListener("mouseout", hideInfo);
+});
