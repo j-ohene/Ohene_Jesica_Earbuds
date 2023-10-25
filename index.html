@@ -1,27 +1,37 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title> Alto Audio</title>
+    <title>&lt;model-viewer&gt; template</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="css/styles.css" rel="stylesheet"/>
-    <link type="text/css" href="css/grid.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/grid.css" rel="stylesheet"/>
   </head>
   <body>
-    <header>
-     
-      <header>
-        <div class="grid-con">
-          <div class="col-span-full m-col-span-ful l-col-span-full xl-col-span-full">
- <h1>Alto Audio</h1>
- </div>
-          </div>
+    <header class="grid-con">
+      <div class="col-span-2 m-col-start-3 m-col-span 3 l-col-start-1 l-col-span-3 xl-col-start-1 xl-col-span-3 box">
+      <img src="/img/logo.png" alt="alto logo" id="logo">
+    </div>
     </header>
+
+<section class="grid-con">
+  <div class="col-span-full m-col-span-full l-col-span-12 xl-col-span-12 box">
+  <h1>Calling all music lovers</h1>
+  <h3> Introducing Alto Audio. </h3>
+  <p> Alto earbuds are built with a unique enclosure that isolates the sound produced. This results in a listening experience like no other. Listeners will hear every note, harmony, and instrument </p>
+</div>
+</section>  
     <!-- <model-viewer> HTML element -->
+      <section class=grid-con>
+        <div class="col-span-full m-col-start-1 m-col-span-6 l-col-start-1 l-col-span-6 xl-col-start-1 xl-col-span-6 box" >
+          <h2>ALTO Premium Wireless Earbuds</h2>
     <model-viewer src="Ohene_J_earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.44" exposure="0.42" shadow-softness="0.39">
       <button class="Hotspot" slot="hotspot-2" data-position="2.4970253529515167m -0.15464313152620135m 0.48305188092382145m" data-normal="0.10398334717058032m 0.9712952007570514m 0.21394648045135484m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Toggle sensor-tap once to pause/play, tap twice to to skip the song. </div>
+          <div class="HotspotAnnotation">Toggle sensor</div>
       </button><button class="Hotspot" slot="hotspot-3" data-position="2.383679408570681m -2.1159505249185533m 0.27513809436115433m" data-normal="0.12050959162131589m 0.02219998178178989m 0.9924639031905151m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">Earpiece-Available in 3 sizes for your comfort</div>
       </button><button class="Hotspot" slot="hotspot-4" data-position="-0.16461831334049365m -1.6673234188154837m -0.7636875813730997m" data-normal="0.3475118136178313m 0.08856065754311598m 0.9334840916328337m" data-visibility-attribute="visible">
@@ -32,6 +42,8 @@
           <div class="HotspotAnnotation">Volume up
           </div>
       </button>
+    
+    
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -41,7 +53,25 @@
       <div id="ar-prompt">
           <img src="img/ar_hand_prompt.png">
       </div>
+    </div>
     </model-viewer>  
+
+    <div class="col-span-full m-col-start-7 m-col-span-6 l-col-start-7 l-col-span-5 xl-col-start-7 xl-col-span-5 box" id="specs">
+      <h4>Specifications</h4>
+      <ul>
+      <li>Up to 36 hours of battery life with charger</li>
+      <li>Up to 8 hours of listening time with a full charge</li>
+      <li> Quick charging: 4 hours of listening time following a 20 minute charge</li>
+      <p>Comes with:  </p>
+      <ul>
+        <li>Compact magnetic charging case</li>
+        <li>Durable wireless charging stand</li>
+        <li> 3 silicone earpieces for optimal comfort</li>
+      </ul>
+    </ul>
+    </div>
+  
+  </section>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
