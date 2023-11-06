@@ -1,45 +1,147 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template</title>
+    <title>Alto Earbuds</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet"/>
-    <link href="css/grid.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
   </head>
   <body>
     <header class="grid-con">
-      <div class="col-span-2 m-col-start-3 m-col-span 3 l-col-start-1 l-col-span-3 xl-col-start-1 xl-col-span-3 box">
-      <img src="/img/logo.png" alt="alto logo" id="logo">
-    </div>
+      <div class="mobile m-col-span-1 box">
+          <nav>
+              <div id="menuToggle">
+                <input type="checkbox" />
+           
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <ul class="mobile col-span-4 box" id="menu-mobile">
+                 <li><a href="index.html">Discover</a></li>
+                 <li><a href="shop.html">Specs</a></li>
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="recipes.html" target="_blank">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+            </div>
+          <div class="tablet m-col-span-2 m-col-start-1 box">
+              <nav>
+                  <div id="t-menuToggle">
+                    <input type="checkbox"/>
+               
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <ul class="tablet l-col-span-12 box" id="menu-tablet">
+                      <li><a href="index.html">Discover</a></li>
+                      <li><a href="shop.html">Specs</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="recipes.html" target="_blank">Contact</a></li>
+                    </ul>
+                  </div>
+                </nav>
+                </div>
+  <nav class= "desktop l-col-span-4 box" >
+      <ul>
+          <li><a href="index.html">Discover</a></li>
+          <li><a href="about.html">Specs</a></li>
+          <li><a href="recipes.html">About</a></li>
+      </ul>
+      </nav>
+    <nav class="xldesktop xl-col-span-4 box">
+  <ul>
+      <li><a href="index.html">Discover</a></li>
+      <li><a href="about.html">Specs</a></li>
+      <li><a href="recipes.html">About</a></li>
+  </ul>
+</nav>
+<div class="col-start-3 col-span-2 m-col-start-5 m-col-span-3 l-col-start-1 l-col-span-3 xl-col-start-1 xl-col-span-3 box">
+  <img src="/img/logo.png" alt="alto logo" id="logo">
+</div>
     </header>
 
 <section class="grid-con">
-  <div class="col-span-full m-col-span-full l-col-span-12 xl-col-span-12 box">
-  <h1>Calling all music lovers</h1>
+  <div class="mobile col-span-full box">
+    <h1>Calling all music lovers</h1>
+    <img src="http://www.placeholder.co/350x300" alt="hero image">
+    </div>
+    <div class="tablet col-span-full box">
+      <h1>Calling all music lovers</h1>
+      <img src="http://www.placeholder.co/550x500" alt="hero image">
+      </div>
+      
+  <div class="desktop l-col-span-12  box">
+    <h1>Calling all music lovers</h1>
+    <img src="http://www.placeholder.co/1000x700" alt="hero image">
+    </div>
+
+    <div class="xldesktop l-col-span-12  box">
+      <h1>Calling all music lovers</h1>
+      <img src="http://www.placeholder.co/1000x700" alt="hero image">
+    </div>
+  <div class="col-span-full m-col-span-full l-col-span-full xl-col-span-full box">
   <h3> Introducing Alto Audio. </h3>
   <p> Alto earbuds are built with a unique enclosure that isolates the sound produced. This results in a listening experience like no other. Listeners will hear every note, harmony, and instrument </p>
 </div>
+<section class="grid-con">
+  <h2 class="hidden">video</h2>
+  <div class="col-span-full m-col-span-full l-col-span-full xl-col-span-full box" id="player-container">
+      <video controls poster="http://www.placeholder.co/1000x700">
+          <source src="http://www.placeholder.co/1000x700"" type="video/mp4">
+          <source src="http://www.placeholder.co/1000x700"" type="video/webm">
+          <p>Your current browser no longer supports playback</p>
+      </video>
+      <div class="video-controls hidden" id="video-controls">
+          <button id="play-button">
+              <i class="fa fa-play-circle-o"></i>
+          </button>
+          <button id="pause-button">
+              <i class="fa fa-pause-circle-o"></i>
+          </button>
+          <button id="stop-button">
+              <i class="fa fa-stop-circle-o"></i>
+          </button>
+          <i class="fa fa-volume-up"></i>
+          <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+          <button id="full-screen">
+              <i class="fa fa-arrows-alt"></i>
+          </button>
+      </div>
+      </div>
+  </section>
 </section>  
     <!-- <model-viewer> HTML element -->
       <section class=grid-con>
         <div class="col-span-full m-col-start-1 m-col-span-6 l-col-start-1 l-col-span-6 xl-col-start-1 xl-col-span-6 box" >
           <h2 id="title">ALTO Premium Wireless Earbuds</h2>
-    <model-viewer id="#earbuds" src="Ohene_J_earbuds.gltf"  ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.44" exposure="0.42" shadow-softness="0.39">
+    <model-viewer id="earbuds" src="Ohene_J_earbuds.gltf"  ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.44" exposure="0.42" shadow-softness="0.39">
+     
       <button class="Hotspot" slot="hotspot-1" data-position="2.4970253529515167m -0.15464313152620135m 0.48305188092382145m" data-normal="0.10398334717058032m 0.9712952007570514m 0.21394648045135484m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Toggle sensor</div>
-      </button><button class="Hotspot" slot="hotspot-2" data-position="2.383679408570681m -2.1159505249185533m 0.27513809436115433m" data-normal="0.12050959162131589m 0.02219998178178989m 0.9924639031905151m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Earpiece-Available in 3 sizes for your comfort</div>
-      </button><button class="Hotspot" slot="hotspot-3" data-position="-0.16461831334049365m -1.6673234188154837m -0.7636875813730997m" data-normal="0.3475118136178313m 0.08856065754311598m 0.9334840916328337m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Earpiece-Available in 3 sizes for your comfort</div>
-      </button><button class="Hotspot" slot="hotspot-4" data-position="0.17269904359608768m 0.333191090534768m 0.4905547457703358m" data-normal="0.07070910174826431m 0.9705765938055032m 0.23017666798974448m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Volume down</div>
-      </button><button class="Hotspot" slot="hotspot-5" data-position="0.24820182532003993m 0.44844955220878857m -0.020665323887771814m" data-normal="0.06982578489480464m 0.9707611485068112m 0.229667482055169m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">Volume up
+          <div class="HotspotAnnotation" id="hotspot-1"></div>
+      </button>
+      
+      <button class="Hotspot" slot="hotspot-2" data-position="2.383679408570681m -2.1159505249185533m 0.27513809436115433m" data-normal="0.12050959162131589m 0.02219998178178989m 0.9924639031905151m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" id="hotspot-2"></div>
+      </button>
+      
+      <button class="Hotspot" slot="hotspot-3" data-position="-0.16461831334049365m -1.6673234188154837m -0.7636875813730997m" data-normal="0.3475118136178313m 0.08856065754311598m 0.9334840916328337m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" id="hotspot-3"></div>
+      </button>
+      
+      <button class="Hotspot" slot="hotspot-4" data-position="0.17269904359608768m 0.333191090534768m 0.4905547457703358m" data-normal="0.07070910174826431m 0.9705765938055032m 0.23017666798974448m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" id="hotspot-4"></div>
+      </button>
+      
+      <button class="Hotspot" slot="hotspot-5" data-position="0.24820182532003993m 0.44844955220878857m -0.020665323887771814m" data-normal="0.06982578489480464m 0.9707611485068112m 0.229667482055169m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" id="hotspot-5">
           </div>
       </button>
       <button slot="ar-button" id="ar-button">
@@ -48,31 +150,61 @@
       </button>
     
       <div id="ar-prompt">
-          <img src="img/ar_hand_prompt.png">
+          <img src="img/ar_hand_prompt.png" alt="ar hand prompt">
       </div>
     </div>
-    </model-viewer>  
-
+  </model-viewer>  
     <div class="col-span-full m-col-start-7 m-col-span-6 l-col-start-7 l-col-span-5 xl-col-start-7 xl-col-span-5 box" id="specs">
       <h4>Specifications</h4>
       <ul>
       <li>Up to 36 hours of battery life with charger</li>
       <li>Up to 8 hours of listening time with a full charge</li>
       <li> Quick charging: 4 hours of listening time following a 20 minute charge</li>
-      <p>Comes with:  </p>
-      <ul>
-        <li>Compact magnetic charging case</li>
-        <li>Durable wireless charging stand</li>
-        <li> 3 silicone earpieces for optimal comfort</li>
-      </ul>
     </ul>
+  </div>
+      </section>
+      <section class= "grid-con">
+        <div class="mobile col-span-full box">
+          <h2>How it works</h2>
+          <p></p>
+          <img src="img/xrayfull-mobile.jpg" alt="x-ray slider">
+        </div>
+        <div class="tablet m-col-span-full box">
+          <h2>How it works</h2>
+          <p></p>
+          <img src="img/xrayfull-tablet.jpg" alt="x-ray slider">
+        </div>
+        <div class="desktop l-col-span-full box">
+          <h2>How it works</h2>
+          <p></p>
+          <img src="img/xrayfull-desktop.jpg" alt="x-ray slider">
+        </div>
+        <div class="xldesktop xl-col-span-full box">
+          <h2>How it works</h2>
+          <p></p>
+          <img src="img/xrayfull-desktop.jpg." alt="x-ray slider">
+        </div>
+      </section>
+  <section class="grid-con" id="interior">
+    <div class="col-span-full m-col-span-full l-col-span-full xl-col-span-full box">
+      <h3>Included in the box:</h3>
     </div>
-  
+      <div class="col-span-full m-col-span-3 l-col-span-3 xl-col-span-3 box">
+      <img src="http://www.placeholder.co/250x250" alt="charging case">
+      <p>Compact magnetic charging case</p>
+      </div>
+      <div class="col-span-full m-col-start-5 m-col-span-3 l-col-start-5 l-col-span-3 xl-col-start-5  xl-col-span-3 box">
+      <img src="http://www.placeholder.co/250x250" alt="usb-c">
+      <p>Durable wireless charging stand</p>
+    </div>
+    <div class="col-span-full m-col-start-9 m-col-span-3 l-col-start-9 l-col-span-3 xl-col-start-9 xl-col-span-3 box">
+      <img src="http://www.placeholder.co/250x250" alt="silicone earpieces">
+      <p> 3 silicone earpieces for optimal comfort</p>
+    </div>
   </section>
-    <script src="js/script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
-
+    <script src="js/script.js"></script>
   </body>
 </html>
