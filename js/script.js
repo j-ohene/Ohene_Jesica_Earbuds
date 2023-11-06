@@ -1,6 +1,3 @@
-// Handles loading the events for <model-viewer>'s slotted progress bar
-
-
 ( ()=>{
   //variables
   const earbuds = document.querySelector ("#earbuds");
