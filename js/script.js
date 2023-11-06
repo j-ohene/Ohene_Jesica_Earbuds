@@ -2,7 +2,6 @@
 
 
 ( ()=>{
-  console.log("IIFE Fired");
   //variables
   const earbuds = document.querySelector ("#earbuds");
   const hotSpots = document.querySelectorAll (".Hotspot");
@@ -10,12 +9,10 @@
     {
       title:'Toggle Sensor',
       text: 'Control your device without needing your device in your hand. Tap once to pause the song or video, tap twice to skip to next song.',
-     image:'img/Promo1-mobile.jpg'
       },
       {
         title: 'Earpiece',
         text: 'Available in 3 sizes to create the most comfortable seal. Created  to isolate as much noise as possible.',
-        image:'img/Promo1-mobile.jpg'
         },
         {
           title: 'Earpiece',
@@ -38,21 +35,21 @@ function earbudsLoaded() {
   });
 }
 function loadInfo() {
-  infoBoxes.forEach((infoBox,index) =>{
+  infoBoxes.forEach((infoBox, index) => {
     let selected = document.querySelector(`#hotspot-${index+1}`);
    
     const titleElement = document.createElement('h4');
-        titleElement.textContent = infoBox.title;
+    titleElement.textContent = infoBox.title;
     
     const textElement = document.createElement('p');
-        titleElement.textContent = infoBox.text;
+        textElement.textContent = infoBox.text;
 
     const imgElement = document.createElement('img');
     imgElement.src = infoBox.image;
 
-        selected.appendchild(titleElement);
-        selected.appendchild(textElement);
-        selected.appendchild(imgElement);
+    selected.appendChild(titleElement);
+    selected.appendChild(textElement);
+        selected.appendChild(imgElement);
 
   });
 }
@@ -74,8 +71,8 @@ function hideInfo(e){
 //event listeners
 earbuds.addEventListener("load", earbudsLoaded);
 
-hotspots.forEach(function (hotSpot) {
-hotSpot.addEventListener("mouseover", showInfo);
-hotSpot.addEventListener("mouseout", hideInfo);
+hotSpots.forEach(function (hotspot) {
+hotspot.addEventListener("mouseenter", showInfo);
+hotspot.addEventListener("mouseleave", hideInfo);
 });
 })();
