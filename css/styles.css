@@ -552,8 +552,8 @@ model-viewer > #ar-prompt > img {
   #earbudShell {
     display: block;
     max-width: 1200px;
-    border: solid 5px #666;
-    padding-right: 40px;
+    border: solid 3px rgb(222, 222, 246);
+    margin-left: 80px;
   }
   #imageContainer {
     position: relative;
@@ -586,10 +586,8 @@ model-viewer > #ar-prompt > img {
   }
   .image-drag {
     background-color: rgb(12, 12, 93);
-    border-color: #430303;
-    border-width: 2px;
     left: 50%;
-    width: 10px;
+    width: 12px;
     cursor: pointer;
   }
 }/*# sourceMappingURL=styles.css.map */

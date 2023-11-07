@@ -93,7 +93,7 @@ console.log(x);
 if (x < min) {
   x = min; 
 } else if (x > max){
-  x = max-10;
+  x = max-12;
 //look to css for bar width and subtract it 
 
 }
