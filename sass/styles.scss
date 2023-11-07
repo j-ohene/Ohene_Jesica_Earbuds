@@ -589,7 +589,65 @@ input[type="range"] {
 text-align: center;
 display: block;
   }
-  interior img{
+  #interior img{
     padding-left:5px;
     padding-right: 5px;
   }
+/*XRAY VIEW*/
+#earbudshell{
+  display:none;
+}
+@media screen and (min-width: 1200px) {
+  #mobile-tablet-view{
+      display: none;
+  }
+  #earbudShell {
+      display: block;
+      max-width: 1200px;
+      border: solid 1px #666;
+      
+  }
+  
+  #imageContainer {
+      position: relative;
+      max-width: 1200px;
+      height: 100vh;
+  }
+#imageContainerxl {
+      position: relative;
+      max-width: 1200px;
+      height: 100vh;
+  }
+  
+  
+  .slideImage {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100vh;
+  }
+  
+  .image-right {
+      background: url(../img/XRAY-version\ desktop.jpg) no-repeat;
+      background-size: cover;
+     /*background-position: center center;
+      background-attachment: fixed;*/
+  }
+  
+  .image-left {
+      background: url(../img/OJnon-xray-desktop.jpg) no-repeat;
+      background-size: cover;
+      /*background-position: center center;*/
+      width: 50%;
+      /*background-attachment: fixed;*/
+  }
+  
+  .image-drag {
+      background-color: #4285f4;
+      border-color: #666;
+      border-width: 2px;
+      left: 50%;
+      width: 10px;
+      cursor: pointer;
+  }
+}
