@@ -49,6 +49,14 @@ li {
   text-align: left;
 }
 
+.nav-links a {
+  text-decoration: none;
+}
+
+ul li .nav-links {
+  display: inline-block;
+}
+
 /*hamburger for mobile*/
 #menuToggle {
   display: block;
@@ -544,7 +552,8 @@ model-viewer > #ar-prompt > img {
   #earbudShell {
     display: block;
     max-width: 1200px;
-    border: solid 1px #666;
+    border: solid 5px #666;
+    padding-right: 40px;
   }
   #imageContainer {
     position: relative;
@@ -563,7 +572,7 @@ model-viewer > #ar-prompt > img {
     height: 100vh;
   }
   .image-right {
-    background: url(../img/XRAY-version\ desktop.jpg) no-repeat;
+    background: url(../img/XRAY-version-desktop.jpg) no-repeat;
     background-size: cover;
     /*background-position: center center;
      background-attachment: fixed;*/
@@ -576,8 +585,8 @@ model-viewer > #ar-prompt > img {
     /*background-attachment: fixed;*/
   }
   .image-drag {
-    background-color: #4285f4;
-    border-color: #666;
+    background-color: rgb(12, 12, 93);
+    border-color: #430303;
     border-width: 2px;
     left: 50%;
     width: 10px;
