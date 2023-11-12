@@ -105,26 +105,10 @@
 <section class="grid-con">
   <h2 class="hidden">video</h2>
   <div class="col-span-full m-col-span-12 l-col-span-12 xl-col-span-12 box" id="player-container">
-      <video controls poster="img/video-thumbnail.jpg">
-          <!--source src="video/Ohene_Jesica-EarbudsVideo.mp4" type="video/mp4"-->
-          <source src="http://www.placeholder.co/1000x700" type="video/webm">
-          <p>Your current browser no longer supports playback</p>
-      </video>
-      <div class="video-controls hidden" id="video-controls">
-          <button id="play-button">
-              <i class="fa fa-play-circle-o"></i>
-          </button>
-          <button id="pause-button">
-              <i class="fa fa-pause-circle-o"></i>
-          </button>
-          <button id="stop-button">
-              <i class="fa fa-stop-circle-o"></i>
-          </button>
-      </div>
-      </div>
-      <div id="end-vid"></div>
+    <canvas id="animation"></canvas> 
+</div>
   </section>
-</section>  
+ 
     <!-- <model-viewer> HTML element -->
       <section class=grid-con>
         <div class="col-span-full m-col-start-1 m-col-span-6 l-col-start-1 l-col-span-6 xl-col-start-1 xl-col-span-6 box" >
@@ -236,6 +220,7 @@
   </section>
     <!-- Loads <model-viewer> for browsers: -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
     <script src="js/script.js"></script>
   </body>

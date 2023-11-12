@@ -33,29 +33,40 @@
   min = 0, 
   max = imageCon.offsetWidth;
 
+//animation variables
+  const canvas = document.querySelector("#animation");
+  const context = canvas.getContext("2d");
+  canvas.width = 1920;
+  canvas.height = 1080;
+  const frameCount = 90; //how many still frames do we have?
+  const images = [];
 
-  let tl = gsap.timeline({
-    // yes, we can add it to an entire timeline!
-    scrollTrigger: {
-      trigger: ".player-container",
-      start: "top top", // when the top of the trigger hits the top of the viewport
-      endTrigger:"#end-vid",
-      end: "+=500", // end after scrolling 500px beyond the start
-      scrub: true, 
-      snap: {
-        snapTo: "labels", // snap to the closest label in the timeline
-        duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-        delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-        ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
-      },
-    },
-  });
-  
-  // add animations and labels to the timeline
-  tl.addLabel("start")
-    .from(".player-container", {  })
-    .to("#end-vid", { })
-    .addLabel("end");
+  const alto = {
+    frame: 0
+};
+
+for (let i=0; i<frameCount; i++) {
+  //console.log(i);
+  //const img = new Image();
+  const img = document.createElement("img");
+  //need to recreate a string: images/explode_0001.webp
+  img.src = `img/Ohene_Jesica-EarbudsVideo${(i+1).toString().padStart(4, '0')}.jpg`;
+  images.push(img);
+}
+
+gsap.to(alto, {
+  frame: 90,
+  snap: "frame",
+  scrollTrigger: {
+      trigger: "#animation",
+      pin: true,
+      scrub: 1,
+      start: "top top",
+      markers: true
+  },
+  onUpdate: render
+})
+
 //functions
 function earbudsLoaded() {
   hotSpots.forEach(hotspot => {
@@ -126,6 +137,13 @@ left.style.width = x + "px";
 
 }
 }
+//animation
+function render() {
+  // console.log(alto.frame);
+  //console.log(images[alto.frame]);
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(images[alto.frame], 4, 0);
+}
 //event listeners
 earbuds.addEventListener("load", earbudsLoaded);
 
@@ -136,6 +154,10 @@ hotspot.addEventListener("mouseleave", hideInfo);
 drag.addEventListener('mousedown', onDown);
 document.body.addEventListener('mouseup',onUp);
 document.body.addEventListener('mousemove', onMove);  
+
+//animation event listener
+images[0].addEventListener("onload", render);
+
 });
 })();
 

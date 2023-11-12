@@ -308,27 +308,8 @@ html {
 }
 
 /*video*/
-#player-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: url(../video/Ohene_Jesica-EarbudsVideo.mp4);
-}
-
-.video-controls {
-  position: absolute;
-  right: 0;
-  left: 0;
-  padding: 20px;
-  bottom: 0;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
-  display: flex;
-  transition: all 0.2s ease;
-}
-
-.video-controls.hide {
-  opacity: 0;
-  pointer-events: none;
+#animation {
+  max-width: 100%;
 }
 
 button {
