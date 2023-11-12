@@ -150,6 +150,7 @@ earbuds.addEventListener("load", earbudsLoaded);
 hotSpots.forEach(function (hotspot) {
 hotspot.addEventListener("mouseenter", showInfo);
 hotspot.addEventListener("mouseleave", hideInfo);
+
 //xray evntlisteners
 drag.addEventListener('mousedown', onDown);
 document.body.addEventListener('mouseup',onUp);
