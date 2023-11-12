@@ -8,7 +8,7 @@ header {
   border-bottom: solid rgb(198, 198, 218) 2px;
 }
 
-#logo {
+.logo {
   height: 60px;
 }
 
@@ -45,8 +45,24 @@ p {
 }
 
 li {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Jaldi", sans-serif;
   text-align: left;
+}
+
+.nav-links {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-links li a {
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 22pt;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline-block;
 }
 
 /*hamburger for mobile*/
@@ -398,7 +414,7 @@ model-viewer {
 .Hotspot {
   background-color: rgb(222, 222, 246);
   border-radius: 32px;
-  border: 4;
+  border: 4px;
   border-color: #4285f4;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
@@ -407,6 +423,10 @@ model-viewer {
   position: relative;
   transition: opacity 0.3s;
   width: 24px;
+}
+
+.Hotspot:hover {
+  opacity: 60%;
 }
 
 .Hotspot:not([data-visible]) {
@@ -418,7 +438,9 @@ model-viewer {
   height: 32px;
   outline: none;
   width: 32px;
-  opacity: 50%;
+  background-color: #fff;
+  border: solid 5px #4285f4;
+  opacity: 100%;
 }
 
 .Hotspot > * {
@@ -527,7 +549,59 @@ model-viewer > #ar-prompt > img {
   display: block;
 }
 
-interior img {
+#interior img {
   padding-left: 5px;
   padding-right: 5px;
+}
+
+/*XRAY VIEW*/
+#earbudshell {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  #mobile-tablet-view {
+    display: none;
+  }
+  #earbudShell {
+    display: block;
+    max-width: 1200px;
+    border: solid 3px rgb(222, 222, 246);
+    margin-left: 80px;
+  }
+  #imageContainer {
+    position: relative;
+    max-width: 1200px;
+    height: 100vh;
+  }
+  #imageContainerxl {
+    position: relative;
+    max-width: 1200px;
+    height: 100vh;
+  }
+  .slideImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+  }
+  .image-right {
+    background: url(../img/XRAY-version-desktop.jpg) no-repeat;
+    background-size: cover;
+    /*background-position: center center;
+     background-attachment: fixed;*/
+  }
+  .image-left {
+    background: url(../img/OJnon-xray-desktop.jpg) no-repeat;
+    background-size: cover;
+    /*background-position: center center;*/
+    width: 50%;
+    /*background-attachment: fixed;*/
+  }
+  .image-drag {
+    background-color: rgb(12, 12, 93);
+    left: 50%;
+    width: 12px;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=styles.css.map */
