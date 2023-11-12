@@ -475,7 +475,7 @@ input[type="range"] {
   .Hotspot {
     background-color: $primary-color;
     border-radius: 32px;
-    border: 4;
+    border: 4px;
     border-color:#4285f4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
@@ -484,6 +484,9 @@ input[type="range"] {
     position: relative;
     transition: opacity 0.3s;
     width: 24px;
+  }
+  .Hotspot:hover{
+    opacity: 60%;
   }
   
   .Hotspot:not([data-visible]) {
@@ -495,7 +498,9 @@ input[type="range"] {
     height: 32px;
     outline: none;
     width: 32px;
-    opacity: 50%;
+    background-color: #fff;
+    border: solid 5px #4285f4;
+    opacity: 100%;
   }
   
   .Hotspot > * {

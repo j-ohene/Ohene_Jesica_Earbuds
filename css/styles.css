@@ -414,7 +414,7 @@ model-viewer {
 .Hotspot {
   background-color: rgb(222, 222, 246);
   border-radius: 32px;
-  border: 4;
+  border: 4px;
   border-color: #4285f4;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
@@ -423,6 +423,10 @@ model-viewer {
   position: relative;
   transition: opacity 0.3s;
   width: 24px;
+}
+
+.Hotspot:hover {
+  opacity: 60%;
 }
 
 .Hotspot:not([data-visible]) {
@@ -434,7 +438,9 @@ model-viewer {
   height: 32px;
   outline: none;
   width: 32px;
-  opacity: 50%;
+  background-color: #fff;
+  border: solid 5px #4285f4;
+  opacity: 100%;
 }
 
 .Hotspot > * {
