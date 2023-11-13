@@ -520,6 +520,11 @@ model-viewer > #ar-prompt > img {
     cursor: pointer;
   }
 }
+#interior img {
+  width: 250px;
+  height: 250px;
+}
+
 #description {
   background-color: black;
 }/*# sourceMappingURL=styles.css.map */

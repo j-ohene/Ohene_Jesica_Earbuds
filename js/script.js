@@ -6,6 +6,7 @@
     {
       title:'Toggle Sensor',
       text: 'Control your device without needing your device in your hand. Tap once to pause the song or video, tap twice to skip to next song.',
+      image: 'img/togglesensor.jpg'
       },
       {
         title: 'Earpiece',
@@ -17,11 +18,13 @@
           },
           {
             title: 'Volume Down Button',
-            text: 'Decreases the volume of any media playing on your device'
+            text: 'Decreases the volume of any media playing on your device',
+            image:"img/volume.jpg"
             },
             {
               title:'Volume Up Button',
-              text:  'Increases the volume of any media playing on your device'
+              text:  'Increases the volume of any media playing on your device',
+              image:"img/volume.jpg"
               },
 
   ]
