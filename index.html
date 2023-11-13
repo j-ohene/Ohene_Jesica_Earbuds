@@ -56,15 +56,15 @@
               <div class="xldesktop xl-col-span-3 box">
                 <img src="/img/logo.png" alt="alto logo" class="logo">
               </div>
-  <nav class= "desktop l-col-start-4  l-col-span-3 box" >
-      <ul class="nav-links">
+  <nav class= "desktop l-col-start-5  l-col-span-6 box" >
+      <ul>
           <li><a href="#">Discover</a></li>
           <li><a href="#">Specs</a></li>
           <li><a href="#">About</a></li>
       </ul>
       </nav>
-    <nav class="xldesktop xl-col-start-4 xl-col-span-3 box">
-  <ul class="nav-links">
+    <nav class="xldesktop xl-col-start-5 xl-col-span-6 box">
+  <ul>
       <li><a href="#">Discover</a></li>
       <li><a href="#">Specs</a></li>
       <li><a href="#">About</a></li>
@@ -101,33 +101,14 @@
   <h3> Introducing Alto Audio. </h3>
   <p> Alto earbuds are built with a unique enclosure that isolates the sound produced. This results in a listening experience like no other. Listeners will hear every note, harmony, and instrument </p>
 </div>
+</section>
 <section class="grid-con">
   <h2 class="hidden">video</h2>
-  <div class="col-span-full m-col-span-full l-col-span-full xl-col-span-full box" id="player-container">
-      <video controls poster="http://www.placeholder.co/1000x700">
-          <source src="http://www.placeholder.co/1000x700" type="video/mp4">
-          <source src="http://www.placeholder.co/1000x700" type="video/webm">
-          <p>Your current browser no longer supports playback</p>
-      </video>
-      <div class="video-controls hidden" id="video-controls">
-          <button id="play-button">
-              <i class="fa fa-play-circle-o"></i>
-          </button>
-          <button id="pause-button">
-              <i class="fa fa-pause-circle-o"></i>
-          </button>
-          <button id="stop-button">
-              <i class="fa fa-stop-circle-o"></i>
-          </button>
-          <i class="fa fa-volume-up"></i>
-          <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
-          <button id="full-screen">
-              <i class="fa fa-arrows-alt"></i>
-          </button>
-      </div>
-      </div>
+  <div class="col-span-full m-col-span-12 l-col-span-12 xl-col-span-12 box" id="player-container">
+    <canvas id="animation"></canvas> 
+</div>
   </section>
-</section>  
+ 
     <!-- <model-viewer> HTML element -->
       <section class=grid-con>
         <div class="col-span-full m-col-start-1 m-col-span-6 l-col-start-1 l-col-span-6 xl-col-start-1 xl-col-span-6 box" >
@@ -239,6 +220,7 @@
   </section>
     <!-- Loads <model-viewer> for browsers: -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
     <script src="js/script.js"></script>
   </body>
