@@ -1,0 +1,56 @@
+#earbudshell{
+    display:none;
+  }
+  @media screen and (min-width: 1200px) {
+    #mobile-tablet-view{
+        display: none;
+    }
+    #earbudShell {
+        display: block;
+        max-width: 1200px;
+        border: solid 3px $primary-color;
+        margin-left: 80px;
+  
+    }
+    
+    #imageContainer {
+        position: relative;
+        max-width: 1200px;
+        height: 100vh;
+    }
+  #imageContainerxl {
+        position: relative;
+        max-width: 1200px;
+        height: 100vh;
+    }
+    
+    
+    .slideImage {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+    
+    .image-right {
+        background: url(../img/XRAY-version-desktop.jpg) no-repeat;
+        background-size: cover;
+       /*background-position: center center;
+        background-attachment: fixed;*/
+    }
+    
+    .image-left {
+        background: url(../img/OJnon-xray-desktop.jpg) no-repeat;
+        background-size: cover;
+        /*background-position: center center;*/
+        width: 50%;
+        /*background-attachment: fixed;*/
+    }
+    
+    .image-drag {
+        background-color: rgb(12, 12, 93);
+        left: 50%;
+        width: 12px;
+        cursor: pointer;
+    }
+  }
