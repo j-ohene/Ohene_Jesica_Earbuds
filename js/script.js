@@ -11,10 +11,12 @@
       {
         title: 'Earpiece',
         text: 'Available in 3 sizes to create the most comfortable seal. Created  to isolate as much noise as possible.',
+        image: 'img/earpiece-img.jpg'
         },
         {
           title: 'Earpiece',
-          text: 'Available in 3 sizes to create the most comfortable seal. Created to isolate as much noise as possible'
+          text: 'Available in 3 sizes to create the most comfortable seal. Created to isolate as much noise as possible',
+          image: 'img/earpiece-img.jpg'
           },
           {
             title: 'Volume Down Button',
@@ -69,6 +71,13 @@ gsap.to(alto, {
   },
   onUpdate: render
 })
+
+
+  gsap.registerPlugin(navBar);
+  const navLinks = document.querySelectorAll("nav ul li a");
+  //console.log(navBar);
+
+ 
 
 //functions
 function earbudsLoaded() {
@@ -140,6 +149,10 @@ left.style.width = x + "px";
 
 }
 }
+gsap.registerPlugin(ScrollToPlugin);
+const navBar = document.querySelectorAll("nav ul li a");
+//console.log(navBar);
+
 //animation
 function render() {
   // console.log(alto.frame);
@@ -147,12 +160,24 @@ function render() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(images[alto.frame], 4, 0);
 }
+
+function scrollLink(e){
+  //console.log("e.currentTarget.hash");
+  e.preventDefault();
+  let selectedLink = e.currentTarget.hash;
+  gsap.to(window, {duration: 1.5, scrollTo:{y:`${selectedLink}`, offsetY:100}});
+  }
 //event listeners
 earbuds.addEventListener("load", earbudsLoaded);
 
 hotSpots.forEach(function (hotspot) {
 hotspot.addEventListener("mouseenter", showInfo);
 hotspot.addEventListener("mouseleave", hideInfo);
+});
+//scrollTo
+navBar.forEach((navBar)=>{
+  navBar.addEventListener ("click",scrollLink);
+})
 
 //xray evntlisteners
 drag.addEventListener('mousedown', onDown);
@@ -162,7 +187,6 @@ document.body.addEventListener('mousemove', onMove);
 //animation event listener
 images[0].addEventListener("onload", render);
 
-});
 })();
 
 

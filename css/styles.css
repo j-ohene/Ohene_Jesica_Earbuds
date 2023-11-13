@@ -74,7 +74,8 @@ nav li a {
 }
 
 nav a:hover {
-  opacity: 0.7;
+  color: rgb(124, 124, 217);
+  scale: 120%;
 }
 
 l #menuToggle {
@@ -276,12 +277,12 @@ l #menuToggle {
 
 #menu-tablet li a {
   padding: 25px 400px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 #menu-mobile li a {
   padding: 15px 120px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /*
@@ -370,7 +371,7 @@ model-viewer {
   display: block;
   font-family: Futura, Helvetica Neue, sans-serif;
   left: calc(100% + 1em);
-  max-width: 150px;
+  max-width: 160px;
   overflow-wrap: break-word;
   padding: 0.5em 1em;
   position: absolute;
@@ -469,8 +470,17 @@ model-viewer > #ar-prompt > img {
   padding-right: 5px;
 }
 
+#specs h3 ul {
+  padding-top: 40px;
+}
+
+#specs ul li {
+  list-style-type: circle;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /*XRAY VIEW*/
-#earbudshell {
+#earbudShell {
   display: none;
 }
 
@@ -523,6 +533,10 @@ model-viewer > #ar-prompt > img {
 #interior img {
   width: 250px;
   height: 250px;
+}
+
+#interior p {
+  font-weight: 600;
 }
 
 #description {
