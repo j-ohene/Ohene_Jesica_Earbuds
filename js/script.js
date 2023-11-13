@@ -170,9 +170,8 @@ document.body.addEventListener('mousemove', onMove);
 
 //animation event listener
 images[0].addEventListener("onload", render);
-};
 
-(() => {
+
 gsap.registerPlugin(ScrollToPlugin);
 const navBar = document.querySelectorAll("nav ul li a");
 //console.log(navBar);
@@ -187,6 +186,5 @@ function scrollLink(e){
 navBar.forEach((navBar)=>{
   navBar.addEventListener ("click",scrollLink);
 })
+
 })();
-
-
