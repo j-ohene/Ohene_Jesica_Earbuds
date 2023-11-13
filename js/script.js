@@ -71,12 +71,6 @@ gsap.to(alto, {
   },
   onUpdate: render
 })
-
-
-  gsap.registerPlugin(navBar);
-  const navLinks = document.querySelectorAll("nav ul li a");
-  //console.log(navBar);
-
  
 
 //functions
@@ -149,9 +143,6 @@ left.style.width = x + "px";
 
 }
 }
-gsap.registerPlugin(ScrollToPlugin);
-const navBar = document.querySelectorAll("nav ul li a");
-//console.log(navBar);
 
 //animation
 function render() {
@@ -161,12 +152,7 @@ function render() {
   context.drawImage(images[alto.frame], 4, 0);
 }
 
-function scrollLink(e){
-  //console.log("e.currentTarget.hash");
-  e.preventDefault();
-  let selectedLink = e.currentTarget.hash;
-  gsap.to(window, {duration: 1.5, scrollTo:{y:`${selectedLink}`, offsetY:100}});
-  }
+
 //event listeners
 earbuds.addEventListener("load", earbudsLoaded);
 
@@ -175,9 +161,7 @@ hotspot.addEventListener("mouseenter", showInfo);
 hotspot.addEventListener("mouseleave", hideInfo);
 });
 //scrollTo
-navBar.forEach((navBar)=>{
-  navBar.addEventListener ("click",scrollLink);
-})
+
 
 //xray evntlisteners
 drag.addEventListener('mousedown', onDown);
@@ -186,7 +170,23 @@ document.body.addEventListener('mousemove', onMove);
 
 //animation event listener
 images[0].addEventListener("onload", render);
+};
 
+(() => {
+gsap.registerPlugin(ScrollToPlugin);
+const navBar = document.querySelectorAll("nav ul li a");
+//console.log(navBar);
+
+
+function scrollLink(e){
+  //console.log("e.currentTarget.hash");
+  e.preventDefault();
+  let selectedLink = e.currentTarget.hash;
+  gsap.to(window, {duration: 1.5, scrollTo:{y:`${selectedLink}`, offsetY:100}});
+  }
+navBar.forEach((navBar)=>{
+  navBar.addEventListener ("click",scrollLink);
+});
 })();
 
 
