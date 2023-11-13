@@ -186,7 +186,7 @@ function scrollLink(e){
   }
 navBar.forEach((navBar)=>{
   navBar.addEventListener ("click",scrollLink);
-});
+})
 })();
 
 
