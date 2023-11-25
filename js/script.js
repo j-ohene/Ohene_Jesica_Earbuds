@@ -1,4 +1,4 @@
-( ()=>{
+(()=>{
   //variables
   const earbuds = document.querySelector ("#earbuds");
   const hotSpots = document.querySelectorAll (".Hotspot");
