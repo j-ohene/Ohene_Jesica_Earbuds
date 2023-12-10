@@ -169,7 +169,7 @@ document.body.addEventListener('mouseup',onUp);
 document.body.addEventListener('mousemove', onMove);  
 
 //animation event listener
-images[0].addEventListener("onload", render);
+images[0].addEventListener('onload', render);
 
 
 gsap.registerPlugin(ScrollToPlugin);
