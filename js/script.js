@@ -38,39 +38,7 @@
   min = 0, 
   max = imageCon.offsetWidth;
 
-//animation variables
-  const canvas = document.querySelector("#animation");
-  const context = canvas.getContext("2d");
-  canvas.width = 1920;
-  canvas.height = 1080;
-  const frameCount = 90; //how many still frames do we have?
-  const images = [];
 
-  const alto = {
-    frame: 0
-};
-
-for (let i=0; i<frameCount; i++) {
-  //console.log(i);
-  //const img = new Image();
-  const img = document.createElement("img");
-  //need to recreate a string: images/explode_0001.webp
-  img.src = `img/Ohene_Jesica-EarbudsVideo${(i+1).toString().padStart(4, '0')}.jpg`;
-  images.push(img);
-}
-
-gsap.to(alto, {
-  frame: 90,
-  snap: "frame",
-  scrollTrigger: {
-      trigger: "#animation",
-      pin: true,
-      scrub: 1,
-      start: "top top",
-      markers: true
-  },
-  onUpdate: render
-})
  
 
 //functions
@@ -169,10 +137,10 @@ document.body.addEventListener('mouseup',onUp);
 document.body.addEventListener('mousemove', onMove);  
 
 //animation event listener
-images[0].addEventListener('onload', render);
 
 
-gsap.registerPlugin(ScrollToPlugin);
+
+gsap.registerPlugin(ScrollToPlugin, scrollTrigger);
 const navBar = document.querySelectorAll("nav ul li a");
 //console.log(navBar);
 
@@ -185,6 +153,49 @@ function scrollLink(e){
   }
 navBar.forEach((navBar)=>{
   navBar.addEventListener ("click",scrollLink);
+})
+
+//animation variables
+const canvas = document.querySelector("#animation");
+const context = canvas.getContext("2d");
+canvas.width = 1920;
+canvas.height = 1080;
+const frameCount = 90; //how many still frames do we have?
+const images = [];
+
+const alto = {
+  frame: 0
+};
+
+for (let i=0; i<frameCount; i++) {
+//console.log(i);
+//const img = new Image();
+const img = document.createElement("img");
+//need to recreate a string: images/explode_0001.webp
+img.src = `/img/Ohene_Jesica-EarbudsVideo${(i+1).toString().padStart(4, '0')}.jpg`;
+images.push(img);
+}
+function render() {
+  // console.log(alto.frame);
+  //console.log(images[alto.frame]);
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(images[alto.frame], 4, 0);
+}
+
+
+images[0].addEventListener('onload', render);
+
+gsap.to(alto, {
+frame: 90,
+snap: "frame",
+scrollTrigger: {
+    trigger: "#animation",
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    markers: true
+},
+onUpdate: render
 })
 
 })();
